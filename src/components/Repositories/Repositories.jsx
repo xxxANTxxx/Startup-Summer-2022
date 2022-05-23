@@ -6,7 +6,6 @@ import Pagination from "../Pagination/Pagination";
 import Repository from "../Repository/Repository";
 
 const Repositories = ({ userRepos, reposCount, handleSetPage }) => {
-  console.log(userRepos);
   return (
     <div className="repositories">
       <h2 className="repositories__title">
