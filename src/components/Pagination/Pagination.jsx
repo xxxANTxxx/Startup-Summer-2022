@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import ReactPaginate from 'react-paginate';
+import React, { useEffect, useState } from "react";
+import ReactPaginate from "react-paginate";
 
-import './Pagination.css';
+import "./Pagination.css";
 
 const Pagination = ({ itemsLength, handleSetPage }) => {
   const itemsPerPage = 4;
@@ -22,8 +22,11 @@ const Pagination = ({ itemsLength, handleSetPage }) => {
   };
 
   return (
-    <div className='pagination'>
-      <div className='pagination__displayed'>{startPage}-{endPage > itemsLength ? itemsLength : endPage} of {itemsLength} items</div>
+    <div className="pagination">
+      <div className="pagination__displayed">
+        {startPage}-{endPage > itemsLength ? itemsLength : endPage} of{" "}
+        {itemsLength} items
+      </div>
       <ReactPaginate
         breakLabel="..."
         nextLabel=">"
@@ -43,6 +46,6 @@ const Pagination = ({ itemsLength, handleSetPage }) => {
       />
     </div>
   );
-}
+};
 
-export default Pagination
+export default Pagination;

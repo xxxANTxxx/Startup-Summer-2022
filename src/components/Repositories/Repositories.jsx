@@ -1,18 +1,22 @@
-import React from 'react';
+import React from "react";
 
-import './Repositories.css';
+import "./Repositories.css";
 
-import Pagination from '../Pagination/Pagination';
-import Repositorie from '../Repositorie/Repositorie';
+import Pagination from "../Pagination/Pagination";
+import Repository from "../Repository/Repository";
 
 const Repositories = ({ userRepos, reposCount, handleSetPage }) => {
+  console.log(userRepos);
   return (
-    <div className='repositories'>
-      <h2 className='repositories__title'>Repositories (<span>{reposCount}</span>)</h2>
+    <div className="repositories">
+      <h2 className="repositories__title">
+        Repositories (<span>{reposCount}</span>)
+      </h2>
       <div className="repositories__content">
-        {userRepos.map((repository) => {
-          return <Repositorie key={repository.id} {...repository} />
-        })}
+        {userRepos &&
+          userRepos.map((repository) => {
+            return <Repository key={repository.id} {...repository} />;
+          })}
       </div>
       <Pagination
         items={userRepos}
@@ -20,7 +24,7 @@ const Repositories = ({ userRepos, reposCount, handleSetPage }) => {
         handleSetPage={handleSetPage}
       />
     </div>
-  )
-}
+  );
+};
 
-export default Repositories
+export default Repositories;

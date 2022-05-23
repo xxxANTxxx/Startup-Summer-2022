@@ -1,0 +1,15 @@
+.repository {
+  padding: 24px 32px;
+  background: #fff;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+.repository__title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #0064eb;
+  margin-bottom: 16px;
+}
+.repository__subtitle {
+  line-height: 19px;
+}
